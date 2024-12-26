@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./ProductList.css";
 import CartItem from "./CartItem";
-import { addItem } from "./cartSlice";
+import { addItem } from "./CartSlice";
 
 function ProductList() {
   const dispatch = useDispatch();
