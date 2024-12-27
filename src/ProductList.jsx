@@ -1,10 +1,9 @@
-/** @format */
-
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./ProductList.css";
 import CartItem from "./CartItem";
 import { addItem } from "./CartSlice";
+import Footer from "./Footer";
 
 function ProductList() {
   const dispatch = useDispatch();
@@ -388,6 +387,7 @@ function ProductList() {
       ) : (
         <CartItem onContinueShopping={handleContinueShopping} />
       )}
+      <Footer />
     </div>
   );
 }

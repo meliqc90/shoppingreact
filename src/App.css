@@ -1,21 +1,32 @@
-/**
- * LandingPage.css
- *
- * @format
- */
+/** @format */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
-.landing-page {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-color: #f8f8f8;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+ul,
+li,
+a,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  overflow: hidden; /* Solo oculta el desbordamiento horizontal */
 }
 
 .background-image {
@@ -38,23 +49,21 @@
   top: 100px;
   backdrop-filter: blur(4px);
   background-color: rgba(0, 0, 0, 0.5);
-  /* gap: 1px; */
 }
 
 .landing_content {
-  margin-top: 430px;
-  margin-left: 150px;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  text-align: center;
-  /* background-color: red; */
-  width: 400px;
-  height: 400px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+  margin-top: 430px;
+  margin-left: 150px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  width: 400px;
+  height: 400px;
 }
 
 .content p,
@@ -62,7 +71,7 @@
   color: rgb(250, 247, 247);
 }
 
-.content h1 {
+.titulo {
   font-size: 45px;
   margin-bottom: 10px;
 }
@@ -78,7 +87,7 @@
   margin: 10px 0;
 }
 
-.get-started-button {
+.shopping-button {
   padding: 15px 25px;
   font-size: 23px;
   border: none;
@@ -87,10 +96,10 @@
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
-.get-started-button:hover {
+.shopping-button:hover {
   background-color: #45a049;
 }
 
@@ -118,35 +127,55 @@
 .product-list-container.visible {
   top: 0;
 }
-/* LandingPage.css */
-@media screen and (max-width: 768px) {
+
+.product-list-container.visible {
+  top: 0;
+}
+
+/* Diseño responsivo */
+
+@media (max-width: 767px) {
   .content {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 
-  .landing_content {
-    margin-top: 100px; /* Adjust as needed */
-    margin-left: 0;
-    width: 80%; /* Adjust as needed */
-    text-align: center;
+  h1.titulo.responsive {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
-  .aboutus_container {
-    margin-top: 20px; /* Adjust as needed */
-    width: 80%; /* Adjust as needed */
+  .content p {
+    font-size: 16px;
+  }
+
+  .shopping-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 30px;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .landing_content {
-    margin-top: 50px; /* Adjust as needed */
-    width: 90%; /* Adjust as needed */
+@media (max-width: 1220px) {
+  .content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
-  .aboutus_container {
-    width: 90%; /* Adjust as needed */
+  h1.titulo.responsive {
+    font-size: 20px !important;
+    margin-bottom: 10px;
+  }
+
+  .content p {
+    font-size: 18px;
+  }
+
+  .shopping-button {
+    font-size: 20px;
+    padding: 7px 17px;
   }
 }

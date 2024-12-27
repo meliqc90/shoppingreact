@@ -1,12 +1,15 @@
-/** @format */
-
-.cart-item {
+/* Wrapper for the entire page content */
+.cart-wrapper {
   display: flex;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
-  background-color: white;
-  width: 500px;
-  gap: 30px;
+  flex-direction: column;
+  /* min-height: 100vh; */
+  min-height: calc(100vh - 200px);
+}
+
+/* Container for the cart content */
+.cart-container {
+  flex: 1;
+  padding: 20px;
 }
 
 .cart-item-image {
@@ -72,27 +75,19 @@
 .cart-item-delete:hover {
   background-color: #cc0000;
 }
-/* .cart-item-button-dec{
-  background-color: red;
+
+.cart-footer {
+  text-align: center;
+  padding: 10px;
+  position: sticky; /* Alternativa para mantener el footer visible al hacer scroll */
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
-.cart-item-button-inc{
-  background-color: green;
-} */
+
+
 @media (max-width: 768px) {
-  .cart-item {
-    flex-direction: column; /* Change flex direction to stack items vertically */
-    align-items: flex-start; /* Align items to the start of the container */
-    width: 100%; /* Set width to full width */
-  }
-
-  .cart-item-image {
-    width: 100%; /* Set image width to full width */
-    height: auto; /* Allow image height to adjust proportionally */
-    margin-right: 0; /* Remove margin */
-    margin-bottom: 10px; /* Add margin bottom for spacing */
-  }
-
-  .cart-item-details {
+ .cart-item-details {
     width: 100%; /* Set details width to full width */
   }
 
@@ -181,7 +176,19 @@
   margin-top: -50px;
 }
 
-.get-started-button1 {
+.button-slice-shopping{
+  padding: 15px 25px;
+  font-size: 23px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 60px;
+}
+
+.button-slice {
   padding: 15px 75px;
   font-size: 23px;
   border: none;
@@ -194,6 +201,8 @@
   margin-bottom: 20px;
 }
 
+
+
 /* .cart-item-button-dec{
     background-color: red;
   }
@@ -202,9 +211,9 @@
   } */
 @media (max-width: 768px) {
   .cart-item {
-    flex-direction: column; /* Change flex direction to stack items vertically */
-    align-items: flex-start; /* Align items to the start of the container */
-    width: 100%; /* Set width to full width */
+    flex-direction: row; Change flex direction to stack items vertically
+    align-items: center; /* Align items to the start of the container */
+    width: 50%; /* Set width to full width */
   }
 
   .cart-item-image {
